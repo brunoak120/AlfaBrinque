@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">AlfaBrinque</string>
+    <string name="txtIniciarJogo">Iniciar</string>
+    <string name="title_activity_categoria">Categoria</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string-array name="categorias">
+        <item name="animais">Animais</item>
+        <item name="alimentos">Alimentos</item>
+        <item name="objetos">Objetos</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alimentos">Alimentos</string>
+    <string name="imagem_da_categoria_ovelha">Imagem da categoria ovelha</string>
+    <string name="animais">Animais</string>
+    <string name="imagem_categoria_animais">Imagem categoria animais</string>
+    <string name="objetos">Objetos</string>
+    <string name="imagem_categoria_objetos">Imagem categoria objetos</string>
+    <string name="novo_jogador">Novo Jogador</string>
+    <string name="bot_o_adicionar_novo_jogador">Botão adicionar novo jogador</string>
+    <string name="title_activity_responder_quiz">ResponderQuiz</string>
+    <string name="imagem_quiz">Imagem Quiz</string>
+
+
+    <array name="imagensAnimais">
+        <item>@drawable/avatar_2</item>
+        <item>@drawable/avatar_1</item>
+        <item>@drawable/avatar_3</item>
+    </array>
+    <string name="title_activity_questoes_respondidas_sucesso">QuestoesRespondidasSucesso</string>
+    <string name="sucesso_icone">Sucesso Ícone</string>
+    <string name="title_activity_tela_adicionar_usuario">Adicione um novo jogador</string>
+    <string name="imagem_de_fundo">Imagem de fundo</string>
+    <string name="imagem_usu_rio">Imagem Usuário</string>
+    <string name="avatar3">avatar3</string>
+    <string name="txt_cd_avatar2">avatar3</string>
+    <string name="selecione_o_seu_usu_rio">Selecione o seu jogador</string>
+    <string name="instru_es_icone">Instruções icone</string>
+    <string name="bot_o_iniciar">botão iniciar</string>
+    <string name="bot_o_pr_xima_quest_o">Botão Próxima Questão</string>
+
+    <string name="txt_categoria_animais">Você completou a categoria Animais com sucesso.</string>
+    <string name="txt_categoria_alimentos">Você completou a categoria Alimentos com sucesso.</string>
+    <string name="txt_categoria_objetos">Você completou a categoria Objetos com sucesso.</string>
+    <string name="digite_o_seu_apelido">Digite o seu apelido</string>
+    <string name="salvar">Salvar</string>
+    <string name="avatar_usu_rio">Avatar Usuário</string>
+    <string name="title_activity_tela_feedback_usuario">TelaFeedbackUsuario</string>
+    <string name="custom_spinner">Custom spinner</string>
+    <string name="imagem_categoria">Imagem categoria</string>
+    <string name="erros">Erros</string>
+    <string name="acertos">Acertos</string>
+    <string name="avatar_1">Avatar 1</string>
+    <string name="categoria">Categoria</string>
+    <string name="txt_feedback_animais">Animais</string>
+    <string name="txt_feedback_alimentos">Alimentos</string>
+    <string name="txt_feedback_objetos">Objetos</string>
+
+
+    <string name="txt_primeiro_acesso">Primeiro Acesso - </string>
+    <string name="txt_ultimo_acesso">Último Acesso - </string>
+    <string name="txt_nenhum_acesso">Nenhum Acesso</string>
+    <string name="txt_dados_indisponiveis">Dados não disponíveis.</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txt_dialog_sim">Sim</string>
+    <string name="dialog_sair_title">Sair do jogo</string>
+    <string name="dialog_sair_texto">Deseja realmente sair do jogo?</string>
+    <string name="txt_dialog_encerrar_quiz_title">Encerrar jogo</string>
+    <string name="txt_dialog_encerrar_quiz_text">Deseja realmente sair do jogo?</string>
+    <string name="txt_dialog_fechar">Fechar</string>
+    <string name="txt_instrucoes_title">Intruções</string>
+
+    <string name="txt_instrucoes_body">
+        <![CDATA[
+            <h4>Inserir o nome de um Jogador</h4>
+               <p>- O jogador de selecionar a opção "Novo Jogador".</p>
+               <p>- Inserir o apelido que deseja utilizar.</p>
+               <p>- Clicar no botão "Salvar".</p>
+
+
+            <h4>Inserir o nome de um Jogador</h4>
+                <i><p>O jogador pode escolher entre três categorias (Animais, Alimentos e Objetos) para jogar.</p></i>
+                <p>- Para selecionar a categoria o jogador deve clicar nos indicadores que ficam nas laterais da tela, podem ser identificados do lado esquerdo e direito da tela.</p>
+                <p>- Outro modo de alterar entre as categorias, pode ser por movimentos touch screen na tela para passar pelas categorias.</p>
+                <p>- Para selecionar uma categoria o jogador deve clicar na imagem de cada categoria.</p>
+
+
+             <h4>Iniciando o jogo</h4>
+                <i><p>Após selecionar a categoria o jogo será iniciado com os objetos da categoria selecionada. Na tela são exibidos campos vazios que devem ser preenchidos com as
+                 letras que estão localizadas no topo da tela. O jogador deve identificar o objeto no centro da tela para assim realizar a tarefa.</p></i>
+
+                <p>- O jogador deve selecionar a letra que deseja colocar em um campo e mantendo a letra pressionada arrastar até o campo de sua preferencia.</p>
+                <p>- O jogador deve preencher todos os campos com as letras disponíveis.</p>
+                <p>- Após preencher os campos o jogador deve selecionar o botão "Seguinte" que fica localizado no lado direito da tela.</p>
+                <p>- Pressionando o botão seguinte outro objeto será exibido na tela para que o jogador realize todos os movimentos para nomear o objeto.</p>
+        ]]>
+    </string>
+    <string name="txt_parabens">Parabéns</string>
+    <string name="txt_venceu">Você completou a categoria!</string>
+    <string name="txt_ouvir_historia">Que tal ouvir uma história?</string>
+    <string name="txt_tocando_historia">Tocando...</string>
+
+</resources>

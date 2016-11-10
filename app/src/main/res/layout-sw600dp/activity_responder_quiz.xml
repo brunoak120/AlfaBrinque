@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/teste_grama3"
+    tools:context="com.book.app.ResponderQuiz">
+
+    <!--android:layout_height="60dp"-->
+    <LinearLayout
+        android:id="@+id/quiz_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:background="#ccc"
+        tools:layout_height="80dp" />
+
+
+    <ImageView
+        android:id="@+id/quiz_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/imagem_quiz"
+        tools:src="@drawable/avatar_2" />
+
+
+    <LinearLayout
+        android:id="@+id/drop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:background="#ccc">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center|end"
+        android:orientation="horizontal"
+        tools:background="#ccc">
+
+        <ImageButton
+            android:id="@+id/btn_apagar"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="50dp"
+            android:onClick="apagarLetras"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/borracha1" />
+
+        <ImageButton
+            android:id="@+id/btnResponder"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bot_o_pr_xima_quest_o"
+            android:onClick="responderQuestao"
+            android:padding="0dp"
+            tools:src="@drawable/ic_play_circle_filled_black_24dp_quiz_tablet" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

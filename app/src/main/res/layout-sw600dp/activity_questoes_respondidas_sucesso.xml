@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTelaCategoriaSucesso"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.book.app.ui.QuestoesRespondidasSucesso">
+
+
+    <com.hanks.htextview.HTextView
+        android:id="@+id/txt_parabens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/textViewTextColor"
+        android:textSize="40sp"
+        htext:animateType="anvil"
+        htext:fontAsset="fonts/A_Bebedera.ttf"
+        tools:text="Parabéns" />
+
+    <ImageView
+        android:id="@+id/sucesso_icone"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:contentDescription="@string/sucesso_icone"
+        tools:src="@drawable/estrela" />
+
+
+    <TextView
+        android:id="@+id/txt_vencedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/textViewTextColor"
+        android:textSize="40sp"
+        android:visibility="gone"
+        tools:text="Vencedor" />
+
+
+    <ImageView
+        android:id="@+id/medal_icone"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/sucesso_icone"
+        android:visibility="gone"
+        tools:src="@drawable/medalha" />
+
+
+    <LinearLayout
+        android:id="@+id/play_historia_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/close_button"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="closeCategoriaSucessoScreen"
+            android:src="@drawable/ic_close_categoria_sucesso_tablet" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_stop"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="pauseSound"
+                android:src="@drawable/ic_pause_black_24dp_tablet"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/txt_historia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="end"
+                android:text="@string/txt_ouvir_historia"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/textViewTextColor" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/btn_play_historia"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/bot_o_pr_xima_quest_o"
+            android:onClick="tocarHistoria"
+            android:src="@drawable/ic_play_circle_filled_black_24dp_quiz_categoria" />
+    </LinearLayout>
+
+
+</LinearLayout>

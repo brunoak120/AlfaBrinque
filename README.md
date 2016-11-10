@@ -1,1 +1,1 @@
-# Aplicativo-educacional
+# App

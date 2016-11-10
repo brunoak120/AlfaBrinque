@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/escolherUsuarioBG"
+    android:orientation="vertical"
+    tools:context="com.book.app.EscolherUsuario">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imagem_usu_rio"
+        android:paddingBottom="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frame_tela_usuario" />
+
+    <com.book.app.util.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/selecione_o_seu_usu_rio"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFF00" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/usuarios_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/usuario1"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="#C5CAE9"
+                android:onClick="setUsuario1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_jogador1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/img_avatar_1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/avatar_1"
+                        android:padding="5dp" />
+
+                    <com.book.app.util.CustomTextView
+                        android:id="@+id/txt_usuario1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_add_jogador1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/btn_novo_jogador_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dashed_border"
+                        android:contentDescription="@string/bot_o_adicionar_novo_jogador"
+                        android:src="@drawable/ic_add_black_24dp" />
+
+                    <com.book.app.util.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+
+                        android:text="@string/novo_jogador"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/usuario2"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:onClick="setUsuario2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_jogador2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_avatar_2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/txt_cd_avatar2"
+                        android:padding="5dp" />
+
+                    <com.book.app.util.CustomTextView
+                        android:id="@+id/txt_usuario2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_add_jogador2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/btn_novo_jogador_2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dashed_border"
+                        android:contentDescription="@string/bot_o_adicionar_novo_jogador"
+                        android:src="@drawable/ic_add_black_24dp" />
+
+                    <com.book.app.util.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/novo_jogador"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/usuario3"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="#FBC02D"
+                android:onClick="setUsuario3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_jogador3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_avatar_3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/avatar3"
+                        android:padding="5dp"
+                        android:src="@drawable/avatar_1" />
+
+                    <com.book.app.util.CustomTextView
+                        android:id="@+id/txt_usuario3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_add_jogador3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/escolherUsuarioBG"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/btn_novo_jogador_3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dashed_border"
+                        android:contentDescription="@string/bot_o_adicionar_novo_jogador"
+                        android:src="@drawable/ic_add_black_24dp" />
+
+                    <com.book.app.util.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/novo_jogador"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/instru_es_icone"
+                android:onClick="mostrarInstrucoes"
+                android:src="@drawable/ic_info_black_24dp_tablet" />
+
+            <ImageButton
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/instru_es_icone"
+                android:onClick="mostrarFeedback"
+                android:src="@drawable/ic_question_answer_black_24dp_tablet" />
+
+            <ImageButton
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/instru_es_icone"
+                android:onClick="mostrarVolume"
+                android:src="@drawable/ic_volume_down_black_24dp_tablet" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
