@@ -25,5 +25,16 @@
         android:src="@drawable/ic_play_circle_filled_black_24dp"
         android:textStyle="bold" />
 
+    <ImageButton
+        android:id="@+id/btn_logar"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:contentDescription="@string/bot_o_logar"
+        android:onClick="iniciarJogo"
+        android:src="@drawable/ic_login_24dp"
+        android:textStyle="bold" />
+
 
 </FrameLayout>
