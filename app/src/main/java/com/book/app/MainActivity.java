@@ -52,6 +52,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void fazerLogin(View view) {
+        Intent intent = new Intent(this, LoginUsuario.class);
+
+        startActivity(intent);
+
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.default_click_sound);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
