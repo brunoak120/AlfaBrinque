@@ -27,6 +27,9 @@
             android:name=".EscolherUsuario"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".LoginUsuario"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".OrganizarImagens"
             android:screenOrientation="landscape" />
         <activity
