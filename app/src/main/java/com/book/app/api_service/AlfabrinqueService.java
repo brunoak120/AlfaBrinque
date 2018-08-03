@@ -11,12 +11,12 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface AlfabrinqueService {
-    public static final String BASE_URL = "http://localhost:8000/api/";
+    public static final String BASE_URL = "http://72.14.185.116/api/";
 
     @POST("registrar")
     boolean registrar();
 
-    @POST("login")
+    @POST("usuario/login")
     Call<Usuario> login(@Body Login login);
 
     @GET("buscarPalavra")

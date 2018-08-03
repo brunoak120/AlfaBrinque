@@ -2,11 +2,11 @@ package com.book.app.api_pojo;
 
 public class Login {
     private String email;
-    private String senha;
+    private String password;
 
-    public Login(String email, String senha) {
+    public Login(String email, String password) {
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
     public String getEmail() {
@@ -17,11 +17,11 @@ public class Login {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
