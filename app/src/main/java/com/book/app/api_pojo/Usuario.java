@@ -1,4 +1,4 @@
-package com.book.app.pojo_api;
+package com.book.app.api_pojo;
 
 public class Usuario {
     private String token;

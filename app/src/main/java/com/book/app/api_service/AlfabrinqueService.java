@@ -1,8 +1,8 @@
 package com.book.app.api_service;
 
-import com.book.app.pojo_api.Login;
-import com.book.app.pojo_api.Palavra;
-import com.book.app.pojo_api.Usuario;
+import com.book.app.api_pojo.Login;
+import com.book.app.api_pojo.Palavra;
+import com.book.app.api_pojo.Usuario;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

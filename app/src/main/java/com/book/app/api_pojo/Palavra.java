@@ -1,4 +1,4 @@
-package com.book.app.pojo_api;
+package com.book.app.api_pojo;
 
 import retrofit2.http.Url;
 
