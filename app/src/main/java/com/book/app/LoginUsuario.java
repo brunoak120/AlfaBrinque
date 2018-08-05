@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.book.app.api_pojo.Login;
+import com.book.app.api_pojo.Som;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
 import com.book.app.util.UtilitarioUI;
@@ -19,7 +20,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @SuppressLint("Registered")
-public class LoginUsuario extends AppCompatActivity{
+public class LoginUsuario extends AppCompatActivity {
     private static String token;
 
     TextView email;
@@ -39,14 +40,10 @@ public class LoginUsuario extends AppCompatActivity{
 
         UtilitarioUI.hideSystemUI(getWindow());
 
-        findViewById(R.id.btn_signin).setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                logar();
-            }
-        });
     }
 
-    private void logar() {
+    public void logar(View view) {
+        Som.bip(this);
         email = (TextView) findViewById(R.id.email);
         password = (TextView) findViewById(R.id.password);
 
@@ -69,6 +66,10 @@ public class LoginUsuario extends AppCompatActivity{
                 Toast.makeText(LoginUsuario.this, "Erro :(", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void criarConta(View view){
+        Som.bip(this);
     }
 
 }
