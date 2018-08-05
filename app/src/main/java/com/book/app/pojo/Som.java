@@ -1,4 +1,4 @@
-package com.book.app.api_pojo;
+package com.book.app.pojo;
 
 import android.content.Context;
 import android.media.MediaPlayer;

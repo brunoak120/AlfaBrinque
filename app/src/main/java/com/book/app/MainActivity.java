@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.book.app.api_pojo.Som;
+import com.book.app.pojo.Som;
 import com.book.app.data.AppDAO;
 import com.book.app.util.UtilitarioUI;
 

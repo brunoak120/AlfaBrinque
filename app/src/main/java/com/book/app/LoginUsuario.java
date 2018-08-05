@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.book.app.api_pojo.Login;
-import com.book.app.api_pojo.Som;
+import com.book.app.pojo.Som;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
 import com.book.app.util.UtilitarioUI;
