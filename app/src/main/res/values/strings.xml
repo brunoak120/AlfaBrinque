@@ -38,6 +38,7 @@
     <string name="txt_cd_avatar2">avatar3</string>
     <string name="selecione_o_seu_usu_rio">Selecione o seu jogador</string>
     <string name="digite_login_e_senha">Digite login e senha</string>
+    <string name="cadastrar_jogador">Cadastrar Jogador</string>
     <string name="instru_es_icone">Instruções icone</string>
     <string name="bot_o_iniciar">botão iniciar</string>
     <string name="bot_o_logar">botão logar</string>

@@ -31,6 +31,9 @@
             android:name=".LoginUsuario"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".CriarContaUsuario"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".OrganizarImagens"
             android:screenOrientation="landscape" />
         <activity
