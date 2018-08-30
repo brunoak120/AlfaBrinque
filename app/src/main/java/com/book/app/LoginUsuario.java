@@ -56,6 +56,7 @@ public class LoginUsuario extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
                     token = response.body().getToken();
+                    Token.getInstance().setToken(token);
                     iniciarJogoOnline();
                 } else {
                     Toast.makeText(LoginUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();

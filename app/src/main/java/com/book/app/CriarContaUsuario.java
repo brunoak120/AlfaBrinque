@@ -133,6 +133,8 @@ public class CriarContaUsuario extends AppCompatActivity {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
+                    token = response.body().getToken();
+                    Token.getInstance().setToken(token);
                     iniciarJogoOnline();
                 } else {
                     Toast.makeText(CriarContaUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();
