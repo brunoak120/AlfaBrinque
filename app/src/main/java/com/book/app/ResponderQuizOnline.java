@@ -1,7 +1,9 @@
 package com.book.app;
 
+import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 import com.book.app.api_pojo.Palavra;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
+import com.book.app.background.BackgroundService;
 import com.book.app.data.AppDAO;
 import com.book.app.pojo.EstadoUsuario;
 import com.book.app.pojo.Questao;
@@ -33,6 +36,7 @@ import com.book.app.util.Shuffle;
 import com.book.app.util.UsuarioEscolhido;
 import com.book.app.util.UtilitarioUI;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,9 +46,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ResponderQuizOnline extends AppCompatActivity{
+public class ResponderQuizOnline extends AppCompatActivity implements View.OnClickListener{
 
+    private ProgressDialog dialog;
     private String shuffledWord;
+    private Palavra palavra = new Palavra();
     private int length;
     private LinearLayout ll;
     private List<TextView> textViewsList = new ArrayList<>();
@@ -90,11 +96,16 @@ public class ResponderQuizOnline extends AppCompatActivity{
 
         rootLayoutImg.setBackgroundResource(R.drawable.teste_grama3);
 
-        buscarPalavra();
+        ll = (LinearLayout) findViewById(R.id.quiz_layout);
+        dropLayout = (LinearLayout) findViewById(R.id.drop_layout);
+        btnResponder = (ImageButton) findViewById(R.id.btnResponder);
+        btnApagar = (ImageButton) findViewById(R.id.btn_apagar);
+
+        carregarQuestao();
 
     }
 
-    private void carregarQuestao(final int categoria, int ordem) {
+    private void carregarQuestao() {
         if (btnResponder != null) {
             if (isTablet) {
                 btnResponder.setImageResource(R.drawable.ic_play_circle_filled_black_24dp_quiz_tablet_disabled);
@@ -121,14 +132,20 @@ public class ResponderQuizOnline extends AppCompatActivity{
             }
         }
 
-        questao = dao.getQuestaoById(categoria, ordem);
+        buscarPalavra();
 
+        questao = new Questao();
+        //questao.setImagemUrl(palavra.getImagem());
+        questao.setQuestaoID(palavra.getId());
+        questao.setRespostaCerta(palavra.getNome());
 
         shuffledWord = Shuffle.shuffleWord(questao.getRespostaCerta().toUpperCase());
 
         quizImage.setImageResource(questao.getImagemUrl());
 
         length = shuffledWord.length();
+
+        tileWidth = 0;
 
         dropLayout.post(new Runnable() {
             @Override
@@ -168,9 +185,9 @@ public class ResponderQuizOnline extends AppCompatActivity{
 
             ll.addView(rootTextView);
 
-            //rootTextView.setOnClickListener(this);
             //VERIFICAR
-            //rootTextView.setOnTouchListener(new ResponderQuizOnline().MyTouchListener());
+            rootTextView.setOnClickListener(this);
+            rootTextView.setOnTouchListener(new MyTouchListener());
 
             textViewsList.add(rootTextView);
         }
@@ -226,7 +243,7 @@ public class ResponderQuizOnline extends AppCompatActivity{
             linearLayout.setLayoutParams(params);
 
             //VERIFICAR
-            //linearLayout.setOnDragListener(new ResponderQuizOnline().MyDragListener());
+            linearLayout.setOnDragListener(new MyDragListener());
             dropLayout.addView(linearLayout);
         }
     }
@@ -237,7 +254,6 @@ public class ResponderQuizOnline extends AppCompatActivity{
             View v = lContainer.getChildAt(0);
 
             if (v != null) {
-                //lContainer.removeView(v);
                 lContainer.removeAllViews();
                 LinearLayout.LayoutParams viewParams = new LinearLayout.LayoutParams(new LinearLayoutCompat.LayoutParams(LinearLayoutCompat.LayoutParams.WRAP_CONTENT, LinearLayoutCompat.LayoutParams.WRAP_CONTENT));
                 TextView tv = (TextView) v;
@@ -253,6 +269,11 @@ public class ResponderQuizOnline extends AppCompatActivity{
                 ll.addView(tv);
             }
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 
     private class MyDragListener implements View.OnDragListener {
@@ -407,10 +428,11 @@ public class ResponderQuizOnline extends AppCompatActivity{
     public void buscarPalavra() {
         Call<Palavra> call = service.buscarPalavra(Token.getInstance().getToken());
 
-        call.enqueue(new Callback<Palavra>() {
+        /*call.enqueue(new Callback<Palavra>() {
             @Override
             public void onResponse(Call<Palavra> call, Response<Palavra> response) {
                 if (response.isSuccessful()) {
+                    palavra.setNome(response.body().getNome());
                     Toast.makeText(ResponderQuizOnline.this, response.body().getNome(), Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(ResponderQuizOnline.this, "Não foi possivel encontrar Palavra :(", Toast.LENGTH_LONG).show();
@@ -421,7 +443,18 @@ public class ResponderQuizOnline extends AppCompatActivity{
             public void onFailure(Call<Palavra> call, Throwable t) {
                 Toast.makeText(ResponderQuizOnline.this, "Algum erro inesperado aconteceu :(", Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
+
+        /*try {
+            Palavra resultado = call.execute().body();
+            Log.i("Retrofit", "Sucesso");
+        } catch (IOException e) {
+            Log.i("Retrofit", e.getMessage());
+        }*/
+
+        Intent intent = new Intent(ResponderQuizOnline.this, BackgroundService.class);
+        startService(intent);
+        int teste = 0;
     }
 
     public void enviarPalavra() {
