@@ -28,8 +28,6 @@ import android.widget.Toast;
 import com.book.app.api_pojo.Palavra;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
-import com.book.app.background.BackgroundService;
-import com.book.app.data.AppDAO;
 import com.book.app.pojo.EstadoUsuario;
 import com.book.app.pojo.Questao;
 import com.book.app.util.Shuffle;
@@ -41,8 +39,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -71,7 +67,6 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
     private int errosCount = 0;
     private int questoesCount = 0;
     private long time = System.currentTimeMillis();
-    // private TextView txtTimer;
     private int count = 0;
     private static int tileWidth = 0;
     private static TextView rootTextView;
@@ -430,34 +425,7 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
     public void buscarPalavra() {
         final Call<Palavra> call = service.buscarPalavra(Token.getInstance().getToken());
 
-        /*call.enqueue(new Callback<Palavra>() {
-            @Override
-            public void onResponse(Call<Palavra> call, Response<Palavra> response) {
-                if (response.isSuccessful()) {
-                    palavra.setNome(response.body().getNome());
-                    Toast.makeText(ResponderQuizOnline.this, response.body().getNome(), Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(ResponderQuizOnline.this, "Não foi possivel encontrar Palavra :(", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Palavra> call, Throwable t) {
-                Toast.makeText(ResponderQuizOnline.this, "Algum erro inesperado aconteceu :(", Toast.LENGTH_LONG).show();
-            }
-        });*/
-
-        /*try {
-            Palavra resultado = call.execute().body();
-            Log.i("Retrofit", "Sucesso");
-        } catch (IOException e) {
-            Log.i("Retrofit", e.getMessage());
-        }*/
-
-        /*Intent teste = new Intent(ResponderQuizOnline.this, BackgroundService.class);
-        startService(teste);*/
-
-        Thread t = new Thread(new Runnable() {
+        Thread buscaPalavra = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -468,42 +436,20 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
                     palavra.setPeso(resultado.getPeso());
                     Log.i("Retrofit", "Sucesso");
                 } catch (IOException e) {
-                    dialog.dismiss();
                     Log.i("Retrofit", e.getMessage());
                 }
             }
         });
 
-        t.start();
+        buscaPalavra.start();
 
         try {
-            t.join();
-        } catch (InterruptedException e) {}
+            buscaPalavra.join();
+        } catch (InterruptedException e) {
+            Log.i("Retrofit", e.getMessage());
+        }
 
-        /*new Thread(){
-            public void run() {
-                super.run();
 
-                dialog = ProgressDialog.show(ResponderQuizOnline.this, "Aguarde", "Sincronizando com o Servidor...");
-
-                try {
-                    Palavra resultado = call.execute().body();
-                    Log.i("Retrofit", "Sucesso");
-                } catch (IOException e) {
-                    dialog.dismiss();
-                    Log.i("Retrofit", e.getMessage());
-                }
-
-                dialog.dismiss();
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                });
-            }
-        }.start();*/
     }
 
     public void enviarPalavra() {
