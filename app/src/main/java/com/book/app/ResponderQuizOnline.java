@@ -26,10 +26,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.book.app.api_pojo.Palavra;
+import com.book.app.api_pojo.PalavraEnviar;
+import com.book.app.api_pojo.RespostaEnviar;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
 import com.book.app.pojo.EstadoUsuario;
 import com.book.app.pojo.Questao;
+import com.book.app.ui.QuestoesRespondidasSucesso;
 import com.book.app.util.Shuffle;
 import com.book.app.util.UsuarioEscolhido;
 import com.book.app.util.UtilitarioUI;
@@ -129,7 +132,6 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         buscarPalavra();
 
         questao = new Questao();
-        //questao.setImagemUrl(palavra.getImagem());
         questao.setQuestaoID(palavra.getId());
         questao.setRespostaCerta(palavra.getNome());
         //questao.setQuestaoID(palavra.getImagem());
@@ -422,6 +424,96 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         }
     }
 
+    private void mostrarRespostaCerta() {
+        acertosCount = acertosCount + 1;
+        MediaPlayer mp = MediaPlayer.create(ResponderQuizOnline.this, R.raw.right_answer);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+
+            }
+        });
+
+        Toast toast = new Toast(this);
+        toast.setGravity(Gravity.BOTTOM | Gravity.START, 0, 0);
+        ImageView result = new ImageView(this);
+
+        result.setImageResource(R.drawable.ic_check_black_24dp);
+
+        toast.setView(result);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    private void mostrarRespostaErrada() {
+        errosCount = errosCount + 1;
+        MediaPlayer mp = MediaPlayer.create(ResponderQuizOnline.this, R.raw.buzzer2);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+
+            }
+        });
+
+        Toast toast = new Toast(this);
+        toast.setGravity(Gravity.BOTTOM | Gravity.START, 0, 0);
+        ImageView result = new ImageView(this);
+
+        result.setImageResource(R.drawable.ic_close_black_24dp);
+
+        toast.setView(result);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public void responderQuestao(View view) {
+        StringBuilder sb = new StringBuilder();
+
+        int childCount = dropLayout.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            LinearLayout lContainer = (LinearLayout) dropLayout.getChildAt(i);
+            TextView tv = (TextView) lContainer.getChildAt(0);
+            if (tv != null) {
+                sb.append(tv.getText());
+            }
+        }
+
+        arrayLength = indexArray.length;
+
+        enviarPalavra(sb.toString());
+
+        if (questao.getRespostaCerta().toUpperCase().equals(sb.toString())) {
+            dropLayout.removeAllViews();
+            mostrarRespostaCerta();
+            proximaQuestao(1);
+        }
+
+        else {
+            dropLayout.removeAllViews();
+            mostrarRespostaErrada();
+            proximaQuestao(0);
+        }
+
+    }
+
+    private void proximaQuestao(int status) {
+        carregarQuestao();
+        /*questoesCount = questoesCount + 1;
+        if (index >= 0 && index <= 4) {
+            if (categoria != -1) {
+            }
+            index = index + 1;
+        } else {
+            Intent intent = new Intent(this, QuestoesRespondidasSucesso.class);
+            intent.putExtra(CATEGORIA_EXTRA, categoria);
+            startActivity(intent);
+            finish();
+
+        }*/
+    }
+
     public void buscarPalavra() {
         final Call<Palavra> call = service.buscarPalavra(Token.getInstance().getToken());
 
@@ -452,7 +544,28 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
 
     }
 
-    public void enviarPalavra() {
+    public void enviarPalavra(String palavraResposta) {
+        PalavraEnviar palavraEnviar = new PalavraEnviar(palavra.getId(), 0, palavraResposta);
+        final Call<RespostaEnviar> call = service.enviarPalavra(Token.getInstance().getToken(), palavraEnviar);
 
+        Thread enviaPalavra = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    RespostaEnviar resposta = call.execute().body();
+                    Log.i("Retrofit", "Sucesso");
+                } catch (IOException e) {
+                    Log.i("Retrofit", e.getMessage());
+                }
+            }
+        });
+
+        enviaPalavra.start();
+
+        try {
+            enviaPalavra.join();
+        } catch (InterruptedException e) {
+            Log.i("Retrofit", e.getMessage());
+        }
     }
 }

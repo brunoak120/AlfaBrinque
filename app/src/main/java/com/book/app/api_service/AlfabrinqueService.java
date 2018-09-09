@@ -4,6 +4,8 @@ import com.book.app.api_pojo.CadastrarUsuario;
 import com.book.app.api_pojo.Login;
 import com.book.app.api_pojo.Palavra;
 import com.book.app.api_pojo.Usuario;
+import com.book.app.api_pojo.PalavraEnviar;
+import com.book.app.api_pojo.RespostaEnviar;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -24,6 +26,6 @@ public interface AlfabrinqueService {
     Call<Palavra> buscarPalavra(@Header("Authorization") String token);
 
     @POST("enviarPalavra")
-    boolean enviarPalavra();
+    Call<RespostaEnviar> enviarPalavra(@Header("Authorization") String token, @Body PalavraEnviar palavra);
 
 }

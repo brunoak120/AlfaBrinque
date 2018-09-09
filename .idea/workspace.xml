@@ -14,8 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07bb4419-6138-4b5b-87a6-fce8655d7ce9" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/PalavraEnviar.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/RespostaEnviar.java" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/book/app/background/BackgroundService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,28 +50,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResponderQuizOnline.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResponderQuizOnline.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
+            <state relative-caret-position="189">
+              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7967#8114#0" expanded="false" />
-                <element signature="e#10605#10667#0" expanded="false" />
-                <element signature="e#16519#17095#0" expanded="true" />
-                <element signature="e#17094#17095#0" expanded="true" />
+                <element signature="e#8054#8201#0" expanded="false" />
+                <element signature="e#10692#10754#0" expanded="false" />
+                <element signature="e#16144#16326#0" expanded="true" />
+                <element signature="e#16325#16326#0" expanded="true" />
+                <element signature="e#16669#16819#0" expanded="true" />
+                <element signature="e#16818#16819#0" expanded="true" />
+                <element signature="e#17369#17519#0" expanded="true" />
+                <element signature="e#17518#17519#0" expanded="true" />
+                <element signature="e#19336#19912#0" expanded="true" />
+                <element signature="e#19911#19912#0" expanded="true" />
+                <element signature="e#20407#20757#0" expanded="true" />
+                <element signature="e#20756#20757#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="PalavraEnviar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/PalavraEnviar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="96">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="24" />
+              <folding>
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#750#751#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,25 +100,76 @@
       <file leaf-file-name="ResponderQuiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="87" column="64" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="87" selection-end-column="64" />
+            <state relative-caret-position="387">
+              <caret line="471" column="20" lean-forward="false" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4235#4573#0" expanded="true" />
+                <element signature="e#4337#4547#0" expanded="true" />
+                <element signature="e#4546#4547#0" expanded="true" />
+                <element signature="e#4572#4573#0" expanded="true" />
+                <element signature="e#5799#5953#0" expanded="true" />
+                <element signature="e#5952#5953#0" expanded="true" />
                 <element signature="e#8340#8393#0" expanded="false" />
+                <element signature="e#8520#9182#0" expanded="true" />
+                <element signature="e#8901#9115#0" expanded="true" />
+                <element signature="e#9114#9115#0" expanded="true" />
+                <element signature="e#9181#9182#0" expanded="true" />
                 <element signature="e#9995#10142#0" expanded="false" />
+                <element signature="e#11013#11163#0" expanded="true" />
+                <element signature="e#11162#11163#0" expanded="true" />
+                <element signature="e#11707#11857#0" expanded="true" />
+                <element signature="e#11856#11857#0" expanded="true" />
                 <element signature="e#16450#16511#0" expanded="false" />
                 <element signature="e#16893#16920#0" expanded="false" />
+                <element signature="e#19083#19133#0" expanded="true" />
+                <element signature="e#19163#19212#0" expanded="true" />
+                <element signature="e#19313#19347#0" expanded="true" />
+                <element signature="e#19349#19586#0" expanded="true" />
+                <element signature="e#19585#19586#0" expanded="true" />
+                <element signature="e#19623#19655#0" expanded="true" />
+                <element signature="e#21345#21527#0" expanded="true" />
+                <element signature="e#21526#21527#0" expanded="true" />
                 <element signature="e#22559#22621#0" expanded="false" />
+                <element signature="e#24584#24814#0" expanded="true" />
+                <element signature="e#24813#24814#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlfabrinqueService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AlfabrinqueService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespostaEnviar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/RespostaEnviar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="27" />
+              <folding>
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#214#215#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#369#370#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Usuario.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,8 +178,8 @@
       <file leaf-file-name="Palavra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Palavra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -124,8 +207,8 @@
       <file leaf-file-name="LoginUsuario.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/LoginUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="48" column="58" lean-forward="false" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="240">
+              <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,6 +251,12 @@
       <find>ll.addView</find>
       <find>rootLayout.addView(rootTextView);</find>
       <find>dropLayout</find>
+      <find>responderQuestao</find>
+      <find>mostrarRespostaCerta</find>
+      <find>updateOrCreateEstadoUsuario</find>
+      <find>proximaQuestao</find>
+      <find>token</find>
+      <find>Token.getInstance().getToken()</find>
       <find>buscarPalavra</find>
     </findStrings>
   </component>
@@ -2215,9 +2304,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/CriarContaUsuario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/Palavra.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/background/BackgroundService.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/PalavraEnviar.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/RespostaEnviar.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java" />
       </list>
     </option>
@@ -2293,7 +2384,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="api_pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlfaBrinque" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlfaBrinque" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api_service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlfaBrinque" type="b2602c69:ProjectViewProjectNode" />
@@ -2302,6 +2403,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlfaBrinque" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlfaBrinque" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2315,7 +2425,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="device.picker.selection" value="0046852981" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536457445517" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536460920472" />
     <property name="SearchEverywhereHistoryKey" value="android.app.appli&#9;PSI&#9;JAVA://android.app.Application&#10;Androi&#9;FILE&#9;file:///var/www/AlfaBrinque/app/src/main/AndroidManifest.xml&#10;AndroidManifest.xml&#9;FILE&#9;file:///var/www/AlfaBrinque/app/src/main/AndroidManifest.xml" />
     <property name="DEBUGGABLE_DEVICE" value="motorola-moto_z3_play-0046852981" />
     <property name="DEBUGGABLE_PROCESS" value="com.book.app" />
@@ -2550,6 +2660,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2559,11 +2670,12 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1793027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23136818" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23581758" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27474973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2572,9 +2684,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128371" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2603,110 +2713,135 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>128</line>
+          <line>131</line>
           <properties />
           <option name="timeStamp" value="224" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>446</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>377</line>
           <properties />
-          <option name="timeStamp" value="232" />
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>379</line>
+          <properties />
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>380</line>
+          <properties />
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>381</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>382</line>
+          <properties />
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>384</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>388</line>
+          <properties />
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>390</line>
+          <properties />
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>392</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java</url>
+          <line>394</line>
+          <properties />
+          <option name="timeStamp" value="268" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>443</line>
+          <line>449</line>
           <properties />
-          <option name="timeStamp" value="237" />
+          <option name="timeStamp" value="274" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>431</line>
+          <line>451</line>
           <properties />
-          <option name="timeStamp" value="238" />
+          <option name="timeStamp" value="275" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>436</line>
+          <line>428</line>
           <properties />
-          <option name="timeStamp" value="239" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>438</line>
-          <properties />
-          <option name="timeStamp" value="240" />
+          <option name="timeStamp" value="277" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
           <line>427</line>
           <properties />
-          <option name="timeStamp" value="241" />
+          <option name="timeStamp" value="278" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>130</line>
+          <line>501</line>
           <properties />
-          <option name="timeStamp" value="242" />
+          <option name="timeStamp" value="288" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>435</line>
+          <line>484</line>
           <properties />
-          <option name="timeStamp" value="243" />
+          <option name="timeStamp" value="295" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>434</line>
+          <line>555</line>
           <properties />
-          <option name="timeStamp" value="244" />
+          <option name="timeStamp" value="296" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>433</line>
-          <properties />
-          <option name="timeStamp" value="245" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>432</line>
-          <properties />
-          <option name="timeStamp" value="246" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>132</line>
-          <properties />
-          <option name="timeStamp" value="247" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>133</line>
-          <properties />
-          <option name="timeStamp" value="248" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>136</line>
-          <properties />
-          <option name="timeStamp" value="249" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="251" />
+          <line>426</line>
+          <properties class="com.book.app.ResponderQuizOnline" method="mostrarRespostaCerta">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="276" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="252" />
+      <option name="time" value="297" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>call.execute().body()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>startService(teste)</expression-string>
         <language-id>JAVA</language-id>
@@ -2719,11 +2854,6 @@
       </expression>
       <expression>
         <expression-string>startService(intent)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>call.execute().body()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -2755,26 +2885,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding>
-            <element signature="e#2054#2093#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_logar.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="46" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_play_circle_filled_black_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -2889,6 +2999,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2897,13 +3008,6 @@
         <state relative-caret-position="142">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3001,17 +3105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_responder_quiz.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/data/AppDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -3025,6 +3118,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <element signature="e#875#876#0" expanded="false" />
+            <element signature="e#909#910#0" expanded="false" />
+            <element signature="e#941#942#0" expanded="false" />
+            <element signature="e#969#970#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1107#1108#0" expanded="false" />
+            <element signature="e#1151#1152#0" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1224#1225#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
+            <element signature="e#1353#1354#0" expanded="false" />
+            <element signature="e#1386#1387#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1459#1460#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1528#1529#0" expanded="false" />
+            <element signature="e#1557#1558#0" expanded="false" />
+            <element signature="e#1601#1602#0" expanded="false" />
+            <element signature="e#1637#1638#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3038,14 +3161,6 @@
             <element signature="e#391#392#0" expanded="false" />
             <element signature="e#437#438#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Palavra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3071,16 +3186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/LoginUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="48" column="58" lean-forward="false" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-23/android.jar!/android/os/NetworkOnMainThreadException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -3092,14 +3197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="297" column="11" lean-forward="false" selection-start-line="297" selection-start-column="11" selection-end-line="297" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3119,19 +3216,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="87" column="64" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="87" selection-end-column="64" />
+        <state relative-caret-position="252">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8340#8393#0" expanded="false" />
-            <element signature="e#9995#10142#0" expanded="false" />
-            <element signature="e#16450#16511#0" expanded="false" />
-            <element signature="e#16893#16920#0" expanded="false" />
-            <element signature="e#22559#22621#0" expanded="false" />
+            <element signature="e#2054#2093#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/background/BackgroundService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_responder_quiz.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="41" />
+          <folding>
+            <element signature="e#2443#2474#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/pojo/Questao.java">
@@ -3151,38 +3267,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="387">
+          <caret line="471" column="20" lean-forward="false" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="66" />
           <folding>
-            <element signature="e#2054#2093#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4235#4573#0" expanded="true" />
+            <element signature="e#4337#4547#0" expanded="true" />
+            <element signature="e#4546#4547#0" expanded="true" />
+            <element signature="e#4572#4573#0" expanded="true" />
+            <element signature="e#5799#5953#0" expanded="true" />
+            <element signature="e#5952#5953#0" expanded="true" />
+            <element signature="e#8340#8393#0" expanded="false" />
+            <element signature="e#8520#9182#0" expanded="true" />
+            <element signature="e#8901#9115#0" expanded="true" />
+            <element signature="e#9114#9115#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9995#10142#0" expanded="false" />
+            <element signature="e#11013#11163#0" expanded="true" />
+            <element signature="e#11162#11163#0" expanded="true" />
+            <element signature="e#11707#11857#0" expanded="true" />
+            <element signature="e#11856#11857#0" expanded="true" />
+            <element signature="e#16450#16511#0" expanded="false" />
+            <element signature="e#16893#16920#0" expanded="false" />
+            <element signature="e#19083#19133#0" expanded="true" />
+            <element signature="e#19163#19212#0" expanded="true" />
+            <element signature="e#19313#19347#0" expanded="true" />
+            <element signature="e#19349#19586#0" expanded="true" />
+            <element signature="e#19585#19586#0" expanded="true" />
+            <element signature="e#19623#19655#0" expanded="true" />
+            <element signature="e#21345#21527#0" expanded="true" />
+            <element signature="e#21526#21527#0" expanded="true" />
+            <element signature="e#22559#22621#0" expanded="false" />
+            <element signature="e#24584#24814#0" expanded="true" />
+            <element signature="e#24813#24814#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Palavra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/background/BackgroundService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/LoginUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="83" />
+        <state relative-caret-position="240">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/PalavraEnviar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_pojo/RespostaEnviar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/ResponderQuizOnline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
+        <state relative-caret-position="189">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7967#8114#0" expanded="false" />
-            <element signature="e#10605#10667#0" expanded="false" />
-            <element signature="e#16519#17095#0" expanded="true" />
-            <element signature="e#17094#17095#0" expanded="true" />
+            <element signature="e#8054#8201#0" expanded="false" />
+            <element signature="e#10692#10754#0" expanded="false" />
+            <element signature="e#16144#16326#0" expanded="true" />
+            <element signature="e#16325#16326#0" expanded="true" />
+            <element signature="e#16669#16819#0" expanded="true" />
+            <element signature="e#16818#16819#0" expanded="true" />
+            <element signature="e#17369#17519#0" expanded="true" />
+            <element signature="e#17518#17519#0" expanded="true" />
+            <element signature="e#19336#19912#0" expanded="true" />
+            <element signature="e#19911#19912#0" expanded="true" />
+            <element signature="e#20407#20757#0" expanded="true" />
+            <element signature="e#20756#20757#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/book/app/api_service/AlfabrinqueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
