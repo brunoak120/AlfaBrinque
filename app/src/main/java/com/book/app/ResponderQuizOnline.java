@@ -58,7 +58,6 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
     private ImageButton btnResponder;
     private Questao questao;
     private ImageView quizImage;
-    private AppDAO dao;
     private int[] indexArray = new int[5];
     private int arrayLength;
     private int index = 1;
@@ -138,10 +137,13 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         //questao.setImagemUrl(palavra.getImagem());
         questao.setQuestaoID(palavra.getId());
         questao.setRespostaCerta(palavra.getNome());
+        //questao.setQuestaoID(palavra.getImagem());
 
         shuffledWord = Shuffle.shuffleWord(questao.getRespostaCerta().toUpperCase());
 
-        quizImage.setImageResource(questao.getImagemUrl());
+        /*if (questao.getImagemUrl() != null) {
+            quizImage.setImageResource(questao.getImagemUrl());
+        }*/
 
         length = shuffledWord.length();
 
@@ -426,7 +428,7 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
     }
 
     public void buscarPalavra() {
-        Call<Palavra> call = service.buscarPalavra(Token.getInstance().getToken());
+        final Call<Palavra> call = service.buscarPalavra(Token.getInstance().getToken());
 
         /*call.enqueue(new Callback<Palavra>() {
             @Override
@@ -452,9 +454,56 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
             Log.i("Retrofit", e.getMessage());
         }*/
 
-        Intent intent = new Intent(ResponderQuizOnline.this, BackgroundService.class);
-        startService(intent);
-        int teste = 0;
+        /*Intent teste = new Intent(ResponderQuizOnline.this, BackgroundService.class);
+        startService(teste);*/
+
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Palavra resultado = call.execute().body();
+                    palavra.setNome(resultado.getNome());
+                    palavra.setImagem(resultado.getImagem());
+                    palavra.setId(resultado.getId());
+                    palavra.setPeso(resultado.getPeso());
+                    Log.i("Retrofit", "Sucesso");
+                } catch (IOException e) {
+                    dialog.dismiss();
+                    Log.i("Retrofit", e.getMessage());
+                }
+            }
+        });
+
+        t.start();
+
+        try {
+            t.join();
+        } catch (InterruptedException e) {}
+
+        /*new Thread(){
+            public void run() {
+                super.run();
+
+                dialog = ProgressDialog.show(ResponderQuizOnline.this, "Aguarde", "Sincronizando com o Servidor...");
+
+                try {
+                    Palavra resultado = call.execute().body();
+                    Log.i("Retrofit", "Sucesso");
+                } catch (IOException e) {
+                    dialog.dismiss();
+                    Log.i("Retrofit", e.getMessage());
+                }
+
+                dialog.dismiss();
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+                });
+            }
+        }.start();*/
     }
 
     public void enviarPalavra() {
