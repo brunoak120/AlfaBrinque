@@ -3,6 +3,7 @@ package com.book.app;
 import android.Manifest;
 import android.annotation.SuppressLint;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -132,8 +133,9 @@ public class CriarContaUsuario extends AppCompatActivity {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(CriarContaUsuario.this, response.body().getToken(), Toast.LENGTH_LONG).show();
                     token = response.body().getToken();
+                    Token.getInstance().setToken(token);
+                    iniciarJogoOnline();
                 } else {
                     Toast.makeText(CriarContaUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();
                 }
@@ -162,5 +164,13 @@ public class CriarContaUsuario extends AppCompatActivity {
         }
 
         return endereco;
+    }
+
+    public void iniciarJogoOnline() {
+        Intent intent = new Intent(this, ResponderQuizOnline.class);
+
+        startActivity(intent);
+
+        Som.bip(this);
     }
 }

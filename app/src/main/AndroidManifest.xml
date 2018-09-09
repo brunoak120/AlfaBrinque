@@ -46,6 +46,10 @@
             android:label="@string/title_activity_responder_quiz"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".ResponderQuizOnline"
+            android:label="@string/title_activity_responder_quiz"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".ui.QuestoesRespondidasSucesso"
             android:label="@string/title_activity_questoes_respondidas_sucesso"
             android:screenOrientation="landscape" />

@@ -55,8 +55,9 @@ public class LoginUsuario extends AppCompatActivity {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(LoginUsuario.this, response.body().getToken(), Toast.LENGTH_LONG).show();
                     token = response.body().getToken();
+                    Token.getInstance().setToken(token);
+                    iniciarJogoOnline();
                 } else {
                     Toast.makeText(LoginUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();
                 }
@@ -71,6 +72,14 @@ public class LoginUsuario extends AppCompatActivity {
 
     public void criarConta(View view){
         Intent intent = new Intent(this, CriarContaUsuario.class);
+
+        startActivity(intent);
+
+        Som.bip(this);
+    }
+
+    public void iniciarJogoOnline() {
+        Intent intent = new Intent(this, ResponderQuizOnline.class);
 
         startActivity(intent);
 
