@@ -6,13 +6,13 @@ public class Palavra {
     private Integer id;
     private String nome;
     private Double peso;
-    private Url imagem;
+    private String imagem;
 
     public Palavra() {
 
     }
 
-    public Palavra(Integer id, String nome, Double peso, Url imagem) {
+    public Palavra(Integer id, String nome, Double peso, String imagem) {
         this.id = id;
         this.nome = nome;
         this.peso = peso;
@@ -43,11 +43,11 @@ public class Palavra {
         this.peso = peso;
     }
 
-    public Url getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(Url imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 }

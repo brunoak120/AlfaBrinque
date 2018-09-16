@@ -14,7 +14,8 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface AlfabrinqueService {
-    public static final String BASE_URL = "http://192.168.0.102:8000/api/";
+    public static final String BASE_URL = "http://192.168.0.103:8000/api/";
+    public static final String BASE_URL_IMAGEM = "http://192.168.0.103:8000";
 
     @POST("usuario/registrar")
     Call<Usuario> registrar(@Body CadastrarUsuario cadastrarUsuario);

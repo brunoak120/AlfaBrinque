@@ -36,6 +36,7 @@ import com.book.app.ui.QuestoesRespondidasSucesso;
 import com.book.app.util.Shuffle;
 import com.book.app.util.UsuarioEscolhido;
 import com.book.app.util.UtilitarioUI;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,6 +45,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.book.app.api_service.AlfabrinqueService.BASE_URL_IMAGEM;
 
 public class ResponderQuizOnline extends AppCompatActivity implements View.OnClickListener{
 
@@ -97,6 +100,7 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         dropLayout = (LinearLayout) findViewById(R.id.drop_layout);
         btnResponder = (ImageButton) findViewById(R.id.btnResponder);
         btnApagar = (ImageButton) findViewById(R.id.btn_apagar);
+        quizImage = (ImageView) findViewById(R.id.quiz_image);
 
         carregarQuestao();
 
@@ -134,13 +138,15 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         questao = new Questao();
         questao.setQuestaoID(palavra.getId());
         questao.setRespostaCerta(palavra.getNome());
-        //questao.setQuestaoID(palavra.getImagem());
 
         shuffledWord = Shuffle.shuffleWord(questao.getRespostaCerta().toUpperCase());
 
-        /*if (questao.getImagemUrl() != null) {
-            quizImage.setImageResource(questao.getImagemUrl());
-        }*/
+        if (palavra.getImagem() != null) {
+            questao.setImageUrlOnline(BASE_URL_IMAGEM + palavra.getImagem());
+            Picasso.get().load(questao.getImageUrlOnline()).into(quizImage);
+        } else {
+            quizImage.setImageResource(0);
+        }
 
         length = shuffledWord.length();
 
