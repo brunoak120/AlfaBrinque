@@ -4,6 +4,7 @@ public class Questao {
     private int questaoID;
     private int chaveCatogoria;
     private int imagemUrl;
+    private String imageUrlOnline;
     private String respostaCerta;
     private int ordem;
     private String somUrl;
@@ -67,6 +68,14 @@ public class Questao {
 
     public void setImagemUrl(int imagemUrl) {
         this.imagemUrl = imagemUrl;
+    }
+
+    public String getImageUrlOnline() {
+        return imageUrlOnline;
+    }
+
+    public void setImageUrlOnline(String imageUrlOnline) {
+        this.imageUrlOnline = imageUrlOnline;
     }
 
     public String getRespostaCerta() {
