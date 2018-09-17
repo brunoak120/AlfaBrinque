@@ -13,6 +13,27 @@
         android:contentDescription="@string/imagem_de_fundo"
         android:padding="10dp"
         android:src="@drawable/tela_principal" />
+    <ImageButton
+        android:id="@+id/btn_logar"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp"
+        android:layout_gravity="end|bottom"
+        android:contentDescription="@string/bot_o_logar"
+        android:onClick="fazerLogin"
+        android:src="@drawable/ic_login_24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:paddingBottom="125dp"
+        android:paddingRight="90dp"
+        android:clickable="false"
+        android:text="Online" >
+    </TextView>
 
     <ImageButton
         android:id="@+id/btn_iniciar"
@@ -23,18 +44,16 @@
         android:contentDescription="@string/bot_o_iniciar"
         android:onClick="iniciarJogo"
         android:src="@drawable/ic_play_circle_filled_black_24dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
-    <ImageButton
-        android:id="@+id/btn_logar"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:contentDescription="@string/bot_o_logar"
-        android:onClick="fazerLogin"
-        android:src="@drawable/ic_login_24dp"
-        android:textStyle="bold" />
-
+        android:layout_gravity="end|bottom"
+        android:paddingBottom="35dp"
+        android:paddingRight="90dp"
+        android:clickable="false"
+        android:text="Offline" >
+    </TextView>
 
 </FrameLayout>
