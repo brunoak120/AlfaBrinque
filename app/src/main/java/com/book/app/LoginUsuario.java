@@ -13,6 +13,16 @@ import com.book.app.pojo.Som;
 import com.book.app.api_pojo.Usuario;
 import com.book.app.api_service.AlfabrinqueService;
 import com.book.app.util.UtilitarioUI;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,9 +37,13 @@ public class LoginUsuario extends AppCompatActivity {
     TextView email;
     TextView password;
 
+    Gson gson = new GsonBuilder()
+            .setLenient()
+            .create();
+
     Retrofit retrofit =  new Retrofit.Builder()
             .baseUrl(AlfabrinqueService.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build();
 
     AlfabrinqueService service = retrofit.create(AlfabrinqueService.class);
@@ -59,7 +73,12 @@ public class LoginUsuario extends AppCompatActivity {
                     Token.getInstance().setToken(token);
                     iniciarJogoOnline();
                 } else {
-                    Toast.makeText(LoginUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        imprimeErros(jObjError.getString("errors"));
+                    } catch (Exception e) {
+                        Toast.makeText(LoginUsuario.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
             }
 
@@ -84,6 +103,32 @@ public class LoginUsuario extends AppCompatActivity {
         startActivity(intent);
 
         Som.bip(this);
+    }
+
+    public void imprimeErros(String json){
+        String errosImprimir = "";
+        Gson gsonErrors = new Gson();
+        Errors errors = gsonErrors.fromJson(json, Errors.class);
+
+        if (errors.getEmail() != null) {
+            for(String message: errors.getEmail()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getPassword() != null) {
+            for(String message: errors.getPassword()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getError() != null) {
+            for(String message: errors.getError()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        Toast.makeText(LoginUsuario.this, errosImprimir, Toast.LENGTH_LONG).show();
     }
 
 }
