@@ -139,6 +139,8 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
         questao.setQuestaoID(palavra.getId());
         questao.setRespostaCerta(palavra.getNome());
 
+        carregarTema(palavra.getCategoria());
+
         shuffledWord = Shuffle.shuffleWord(questao.getRespostaCerta().toUpperCase());
 
         if (palavra.getImagem() != null) {
@@ -532,6 +534,7 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
                     palavra.setImagem(resultado.getImagem());
                     palavra.setId(resultado.getId());
                     palavra.setPeso(resultado.getPeso());
+                    palavra.setCategoria(resultado.getCategoria());
                     Log.i("Retrofit", "Sucesso");
                 } catch (IOException e) {
                     Log.i("Retrofit", e.getMessage());
@@ -550,7 +553,7 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
 
     }
 
-    public void enviarPalavra(String palavraResposta) {
+    public void enviarPalavra (String palavraResposta) {
         PalavraEnviar palavraEnviar = new PalavraEnviar(palavra.getId(), 0, palavraResposta);
         final Call<RespostaEnviar> call = service.enviarPalavra(Token.getInstance().getToken(), palavraEnviar);
 
@@ -572,6 +575,17 @@ public class ResponderQuizOnline extends AppCompatActivity implements View.OnCli
             enviaPalavra.join();
         } catch (InterruptedException e) {
             Log.i("Retrofit", e.getMessage());
+        }
+    }
+
+
+    public void carregarTema (String categoria) {
+        if (categoria.equals("Animais")) {
+            rootLayoutImg.setBackgroundResource(R.drawable.teste_grama3);
+        } else if (categoria.equals("Alimentos")) {
+            rootLayoutImg.setBackgroundResource(R.drawable.picnic_novo);
+        } else {
+            rootLayoutImg.setBackgroundResource(R.drawable.fundo_objetos);
         }
     }
 }

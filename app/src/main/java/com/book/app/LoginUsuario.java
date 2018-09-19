@@ -68,6 +68,7 @@ public class LoginUsuario extends AppCompatActivity {
                     iniciarJogoOnline();
                 } else {
                     try {
+
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         imprimeErros(jObjError.getString("errors"));
                     } catch (Exception e) {

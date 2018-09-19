@@ -7,16 +7,18 @@ public class Palavra {
     private String nome;
     private Double peso;
     private String imagem;
+    private String categoria;
 
     public Palavra() {
 
     }
 
-    public Palavra(Integer id, String nome, Double peso, String imagem) {
+    public Palavra(Integer id, String nome, Double peso, String imagem, String categoria) {
         this.id = id;
         this.nome = nome;
         this.peso = peso;
         this.imagem = imagem;
+        this.categoria = categoria;
     }
 
     public Integer getId() {
@@ -49,5 +51,13 @@ public class Palavra {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }
