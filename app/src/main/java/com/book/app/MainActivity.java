@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
     public void fazerLogin(View view) {
         Intent intent = new Intent(this, LoginUsuario.class);
 
+        Som.bip(this);
+
         startActivity(intent);
 
-        Som.bip(this);
     }
 
     @Override

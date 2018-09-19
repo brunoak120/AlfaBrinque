@@ -4,6 +4,7 @@ public class CadastrarUsuario {
     private String nome;
     private String email;
     private String senha;
+    private String confirmarSenha;
     private String bairro;
     private String logradouro;
     private String cidade;
@@ -13,10 +14,11 @@ public class CadastrarUsuario {
 
     }
 
-    public CadastrarUsuario(String nome, String email, String senha, String bairro, String logradouro, String cidade, String estado) {
+    public CadastrarUsuario(String nome, String email, String senha, String confirmarSenha, String bairro, String logradouro, String cidade, String estado) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.confirmarSenha = confirmarSenha;
         this.bairro = bairro;
         this.logradouro = logradouro;
         this.cidade = cidade;
@@ -77,5 +79,13 @@ public class CadastrarUsuario {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getConfirmarSenha() {
+        return confirmarSenha;
+    }
+
+    public void setConfirmarSenha(String confirmarSenha) {
+        this.confirmarSenha = confirmarSenha;
     }
 }

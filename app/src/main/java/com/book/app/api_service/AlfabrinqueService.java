@@ -11,15 +11,30 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface AlfabrinqueService {
-    public static final String BASE_URL = "http://192.168.0.103:8000/api/";
-    public static final String BASE_URL_IMAGEM = "http://192.168.0.103:8000";
+    /**
+     * @description production variables
+     */
+    /*public static final String BASE_URL = "http://72.14.185.116/api/";
+    public static final String BASE_URL_IMAGEM = "http://72.14.185.116";*/
 
+    public static final String BASE_URL = "http://192.168.0.101:8000/api/";
+    public static final String BASE_URL_IMAGEM = "http://192.168.0.101:8000";
+
+    @Headers({
+            "Content-Type: application/json",
+            "X-Requested-With: XMLHttpRequest"
+    })
     @POST("usuario/registrar")
     Call<Usuario> registrar(@Body CadastrarUsuario cadastrarUsuario);
 
+    @Headers({
+            "Content-Type: application/json",
+            "X-Requested-With: XMLHttpRequest"
+    })
     @POST("usuario/login")
     Call<Usuario> login(@Body Login login);
 

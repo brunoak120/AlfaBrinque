@@ -30,6 +30,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.List;
@@ -121,6 +124,7 @@ public class CriarContaUsuario extends AppCompatActivity {
                 nome.getText().toString(),
                 email.getText().toString(),
                 senha.getText().toString(),
+                confirmarSenha.getText().toString(),
                 bairro,
                 logradouro,
                 cidade,
@@ -137,7 +141,12 @@ public class CriarContaUsuario extends AppCompatActivity {
                     Token.getInstance().setToken(token);
                     iniciarJogoOnline();
                 } else {
-                    Toast.makeText(CriarContaUsuario.this, "Login errado :(", Toast.LENGTH_LONG).show();
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        imprimeErros(jObjError.getString("errors"));
+                    } catch (Exception e) {
+                        Toast.makeText(CriarContaUsuario.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
             }
 
@@ -172,5 +181,43 @@ public class CriarContaUsuario extends AppCompatActivity {
         startActivity(intent);
 
         Som.bip(this);
+    }
+
+    public void imprimeErros(String json){
+        String errosImprimir = "";
+        Gson gsonErrors = new Gson();
+        Errors errors = gsonErrors.fromJson(json, Errors.class);
+
+        if (errors.getEmail() != null) {
+            for(String message: errors.getEmail()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getPassword() != null) {
+            for(String message: errors.getPassword()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getError() != null) {
+            for(String message: errors.getError()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getSenha() != null) {
+            for(String message: errors.getSenha()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        if (errors.getConfirmarSenha() != null) {
+            for(String message: errors.getConfirmarSenha()){
+                errosImprimir = errosImprimir + message + "\n";
+            }
+        }
+
+        Toast.makeText(CriarContaUsuario.this, errosImprimir, Toast.LENGTH_LONG).show();
     }
 }
