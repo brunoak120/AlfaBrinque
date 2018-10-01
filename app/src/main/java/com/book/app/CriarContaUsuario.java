@@ -37,6 +37,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.List;
 
+import me.drakeet.materialdialog.MaterialDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -64,7 +65,11 @@ public class CriarContaUsuario extends AppCompatActivity {
     private FusedLocationProviderClient client;
     private Address endereco;
 
-    Retrofit retrofit =  new Retrofit.Builder()
+    public static final int REQUEST_PERMISSIONS_CODE = 128;
+
+    private MaterialDialog mMaterialDialog;
+
+    Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(AlfabrinqueService.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
@@ -78,13 +83,12 @@ public class CriarContaUsuario extends AppCompatActivity {
 
         UtilitarioUI.hideSystemUI(getWindow());
 
-        requererPermissao();
-
         client = LocationServices.getFusedLocationProviderClient(this);
 
-        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            return;
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            callDialog("É preciso a permissão ACCESS_FINE_LOCATION para criar conta do jogador.", new String[]{Manifest.permission.ACCESS_FINE_LOCATION});
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSIONS_CODE);
         }
 
         client.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
@@ -108,10 +112,6 @@ public class CriarContaUsuario extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    public void requererPermissao() {
-        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, 1);
     }
 
     public void registrar(View view) {
@@ -219,5 +219,26 @@ public class CriarContaUsuario extends AppCompatActivity {
         }
 
         Toast.makeText(CriarContaUsuario.this, errosImprimir, Toast.LENGTH_LONG).show();
+    }
+
+    private void callDialog( String message, final String[] permissions ){
+        mMaterialDialog = new MaterialDialog(this)
+                .setTitle("Permission")
+                .setMessage( message )
+                .setPositiveButton("Ok", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        ActivityCompat.requestPermissions(CriarContaUsuario.this, permissions, REQUEST_PERMISSIONS_CODE);
+                        mMaterialDialog.dismiss();
+                    }
+                })
+                .setNegativeButton("Cancel", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mMaterialDialog.dismiss();
+                    }
+                });
+        mMaterialDialog.show();
     }
 }

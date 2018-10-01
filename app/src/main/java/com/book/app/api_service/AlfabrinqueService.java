@@ -18,11 +18,11 @@ public interface AlfabrinqueService {
     /**
      * @description production variables
      */
-    /*public static final String BASE_URL = "http://72.14.185.116/api/";
-    public static final String BASE_URL_IMAGEM = "http://72.14.185.116";*/
+    public static final String BASE_URL = "http://72.14.185.116/api/";
+    public static final String BASE_URL_IMAGEM = "http://72.14.185.116";
 
-    public static final String BASE_URL = "http://192.168.0.101:8000/api/";
-    public static final String BASE_URL_IMAGEM = "http://192.168.0.101:8000";
+    /*public static final String BASE_URL = "http://192.168.15.14:8000/api/";
+    public static final String BASE_URL_IMAGEM = "http://192.168.15.14:8000";*/
 
     @Headers({
             "Content-Type: application/json",

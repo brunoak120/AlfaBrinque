@@ -36,6 +36,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
     implementation 'com.google.android.gms:play-services-location:15.0.1'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'me.drakeet.materialdialog:library:1.2.2'
     testImplementation 'junit:junit:4.12'
 
 }
